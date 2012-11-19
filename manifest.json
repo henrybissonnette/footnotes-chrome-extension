@@ -1,0 +1,35 @@
+{
+  "name": "Hank's First Extension",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Most Awesome Extension of All Time",
+  "content_scripts" : [
+        {
+            "matches" : [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "exclude_matches" : [
+              "http://withfootnotes/*"
+            ],
+            "js" : [
+              "jquery.js",
+              "underscore.js",
+              "libraries/backbone.js",
+              "footnotes.js"
+            ],
+            "css" : [
+              "css/footnotes.css"
+            ]
+        }
+    ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "http://api.flickr.com/"
+  ]
+}

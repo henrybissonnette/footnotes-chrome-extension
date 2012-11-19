@@ -1,0 +1,19 @@
+body{
+  padding-right: 100px;
+}
+
+.footnotes{
+  float:right;
+  font-size:30px;  
+  color:black;
+  background-color:#fff;
+  padding-top:60px;
+  border:solid black;
+  min-height: 100px;
+  cursor: pointer;
+}
+
+.footnotes.minimized{
+  color:white;
+  background-color:#00f;
+}
