@@ -16,10 +16,12 @@
               "jquery.js",
               "underscore.js",
               "libraries/backbone.js",
+              "libraries/jquery.pageslide.js",
               "footnotes.js"
             ],
             "css" : [
-              "css/footnotes.css"
+              "css/footnotes.css",
+              "css/jquery.pageslide.css"
             ]
         }
     ],
@@ -27,7 +29,7 @@
     "scripts": ["background.js"]
   },
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "footnotes_fav_soft.png"
   },
   "permissions": [
     "http://api.flickr.com/"

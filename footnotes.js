@@ -17,13 +17,20 @@
 //   });
 // });
 
-window.withfootnotes = {}
+window.withfootnotes = {
+
+}
 
 withfootnotes.main = function(){
   var footnotes = $('<div>').addClass('footnotes minimized');
   footnotes.text('<');
   $('body').prepend(footnotes);
+  $('body').prepend('<div id="modal" style="display:none"><h2>Modal</h2><a href="javascript:$.pageslide.close()">Close</a></div>'
+);
   footnotes.css({'margin-top':'-170px'});
+  footnotes.html('<a class="slider" href="#modal">pageslide</a>'); 
+  $('a.slider').pageslide({direction:'left'});
+
    return footnotes;
 }();
 
@@ -37,7 +44,9 @@ withfootnotes.main.toggleMinimized = function(){
   if(f.hasClass('minimized')){
     $(f).animate({width:'150px'});
     $(f).removeClass('minimized');
-    $(f).text('footnotes');      
+    $(f).html('<a class="slider" href="#modal">pageslide</a>'); 
+    $('a.slider').pageslide({direction:'left'});
+    withfootnotes.main.slidebutton();     
   }
   else{
     $(f).animate({width:'30px'});
@@ -50,6 +59,13 @@ withfootnotes.main.click(function(){
   withfootnotes.main.toggleMinimized();
 });
 
+// withfootnotes.main.slidebutton = function(){
+//   this.find('a.slider').click(function(){
+//     alert('pageslide clicked');
+//     $('a.slider').pageslide();
+//   });  
+// }
+
 withfootnotes.hide = function(){
   if (!window.withfootnotes.main.hasClass('minimized')){
     window.withfootnotes.main.toggleMinimized();
@@ -61,12 +77,13 @@ withfootnotes.hide = function(){
 
 chrome.extension.onMessage.addListener(
   function(request, sender, sendResponse) {
-    if ($(window.withfootnotes.main).hasClass('deployed')){
-      window.withfootnotes.hide();
-    }
-    else{
-      window.withfootnotes.show() ;
-    }
+    $('a.slider').click()
+    // if ($(window.withfootnotes.main).hasClass('deployed')){
+    //   window.withfootnotes.hide();
+    // }
+    // else{
+    //   window.withfootnotes.show();
+    // }
     console.log(sender.tab ?
                 "from a content script:" + sender.tab.url :
                 "from the extension");
