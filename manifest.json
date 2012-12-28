@@ -26,12 +26,16 @@
         }
     ],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": [
+      "background.js",
+      "jquery.js"
+      ]
   },
   "browser_action": {
     "default_icon": "footnotes_fav_soft.png"
   },
   "permissions": [
-    "http://api.flickr.com/"
+    "http://api.flickr.com/",
+    "http://localhost:8080/"
   ]
 }
