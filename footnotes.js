@@ -1,5 +1,4 @@
 
-
 (function(){
   window.withfootnotes = {}
   var slideBase = '\
@@ -15,7 +14,7 @@
 chrome.extension.onMessage.addListener(
   function(request, sender, sendResponse) {
     $('a#slider').click()
-    console.log(request.greeting);
+    console.log(request.notes);
     console.log(sender.tab ?
                 "from a content script:" + sender.tab.url :
                 "from the extension");
