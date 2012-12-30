@@ -18,7 +18,6 @@ extension = {
           greeting: "hello",
           notes: response
         })
-        console.log('response: ' + response.response);
       }
     }) 
   },
