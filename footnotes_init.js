@@ -1,0 +1,5 @@
+Footnotes = {
+  Models: {},
+  Collections: {},
+  Views: {}
+}
