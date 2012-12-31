@@ -29,12 +29,15 @@ Footnotes.Views.QuestionView = class QuestionView extends Backbone.View
     typeIndicator = @$(".type_indicator")
     typeIndicator.remove()
     others.each ->
+      console.log "each happened"
       if $(this).is(":visible")
+        console.log "is visible"
         $(this).siblings(".title").find('.minimize').text('+')
         $(this).siblings(".title").addClass('minimized')
         $(this).siblings(".title").prepend(typeIndicator)
         $(this).hide()
       else
+        console.log "is not visible"
         $(this).siblings(".title").find('.minimize').text('-')
         $(this).siblings(".title").removeClass('minimized')
         $(this).siblings(".content").prepend(typeIndicator)
