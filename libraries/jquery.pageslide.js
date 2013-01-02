@@ -68,7 +68,7 @@
         switch( direction ) {
             case 'left':
                 $pageslide.css({ left: 'auto', right: '-' + slideWidth + 'px' });
-                bodyAnimateIn['margin-left'] = '-=' + slideWidth;
+                bodyAnimateIn['margin-right'] = '+=' + slideWidth;
                 slideAnimateIn['right'] = '+=' + slideWidth;
                 break;
             default:
@@ -164,7 +164,7 @@
         
         switch( $pageslide.data( 'direction' ) ) {
             case 'left':
-                bodyAnimateIn['margin-left'] = '+=' + slideWidth;
+                bodyAnimateIn['margin-right'] = '-=' + slideWidth;
                 slideAnimateIn['right'] = '-=' + slideWidth;
                 break;
             default:

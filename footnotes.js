@@ -11,7 +11,7 @@ Footnotes.initialize = function(){
 
 Footnotes.render = function(){
     $('body').prepend(this.slideBase);
-    $("#slider").pageslide({ direction: "left" });    
+    $("#slider").pageslide({ direction: "left", modal: true });    
     Footnotes.setQuery();
   },
 
