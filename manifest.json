@@ -20,7 +20,6 @@
             ],
             "js" : [
               "jquery.js",
-              "underscore.js",
               "libraries/jquery.pageslide.js",
               "footnotes_init.js",
               "footnotes.js"
@@ -36,6 +35,7 @@
   "permissions": [
     "tabs",
     "http://api.flickr.com/",
-    "http://localhost:8080/"
+    "http://localhost:8080/",
+    "http://www.withfootnotes.com/"
   ]
 }

@@ -1,5 +1,3 @@
-
-
 Footnotes.slideBase = '<a id="slider" href="" style="display:none">null</a>'
 
 Footnotes.isOpen = false
@@ -25,9 +23,6 @@ Footnotes.initListener = function(){
     chrome.extension.onMessage.addListener(
       function(request, sender, sendResponse) {
         $('a#slider').click();
-        if (request.greeting == "hello"){
-          sendResponse({farewell: "goodbye"});
-        }
     });    
   },
 
