@@ -21,24 +21,11 @@
             "js" : [
               "jquery.js",
               "underscore.js",
-              "libraries/mustache.js",
-              "libraries/backbone.js",
               "libraries/jquery.pageslide.js",
               "footnotes_init.js",
-              "lib/templates.js",
-              "lib/models/question.js",
-              "lib/collections/questions.js",
-              "lib/views/focal_note_view.js",
-              "lib/views/new_question_form_view.js",
-              "lib/views/note_focus_view.js",
-              "lib/views/note_list_view.js",
-              "lib/views/overlay_view.js",
-              "lib/views/question_view.js",
-              "lib/views/response_form_view.js",
               "footnotes.js"
             ],
             "css" : [
-              "css/footnotes.css",
               "css/jquery.pageslide.css"
             ]
         }

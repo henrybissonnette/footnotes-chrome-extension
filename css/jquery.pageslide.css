@@ -8,13 +8,9 @@
     z-index: 999999;
     
     /* Specify the width of your pageslide here */
-    width: 260px;
-    padding: 20px;
+    width: 300px;
+    padding: 0px;
     
     /* These styles are optional, and describe how the pageslide will look */
-    background-color: #fff;
-    color: #000;
-    -webkit-box-shadow: inset 0 0 5px 5px #222;
-    -moz-shadow: inset 0 0 5px 5px #222;
-    box-shadow: inset 0 0 5px 5px #222;
+    background-color: #204080;
 }
