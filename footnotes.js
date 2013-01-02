@@ -1,7 +1,7 @@
 
 
 Footnotes.slideBase = '\
-    <a id="slider" href="#footnotes_modal" style="display:none">null</a>\
+    <a id="slider" href="" style="display:none">null</a>\
     <div id="footnotes_modal" style="display:none">\
     <h1>Footnotes</h1>\
     <div id="right_bar"></div>\
@@ -17,7 +17,14 @@ Footnotes.initialize = function(){
 
 Footnotes.render = function(){
     $('body').prepend(this.slideBase);
-    $("#slider").pageslide({ direction: "left" });     
+    $("#slider").pageslide({ direction: "left" });    
+    Footnotes.setQuery();
+  },
+
+Footnotes.setQuery = function(url){
+    chrome.extension.sendMessage({url_request: "true"}, function(response) {
+      $('#slider').attr('href',"http://localhost:5050/notes_for_url?external_url="+response.external_url+"&from_extension=true")
+    });
   },
 
 Footnotes.initListener = function(){
